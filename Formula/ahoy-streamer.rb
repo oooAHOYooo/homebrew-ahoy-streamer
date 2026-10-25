@@ -1,17 +1,17 @@
 class AhoyStreamer < Formula
   desc "Keyboard-first terminal for discovering and playing AHOY Streamer media"
   homepage "https://github.com/oooAHOYooo/ahoy-streamer-cli"
-  version "0.1.0-standalone-preview.2"
+  version "0.1.0-standalone-preview.3"
   license :cannot_represent
 
   depends_on macos: :ventura
 
   if Hardware::CPU.arm?
-    url "https://github.com/oooAHOYooo/ahoy-streamer-cli/releases/download/v0.1.0-standalone-preview.2/ahoy-streamer-macos-apple-silicon-preview.zip"
-    sha256 "230914dabd85cd35af1d4b0288b7676d18c999c07db3491bdd8f6193d63a0d77"
+    url "https://github.com/oooAHOYooo/ahoy-streamer-cli/releases/download/v0.1.0-standalone-preview.3/ahoy-streamer-macos-apple-silicon-preview.zip"
+    sha256 "05186bfcb5624789ff78b149893f9560055afabd81e36c9b8fcf8ac82620c229"
   else
-    url "https://github.com/oooAHOYooo/ahoy-streamer-cli/releases/download/v0.1.0-standalone-preview.2/ahoy-streamer-macos-intel-preview.zip"
-    sha256 "d2989c4ec8605b07913ff13d97a706a57817a012b36e3af69028cb4aade8d74f"
+    url "https://github.com/oooAHOYooo/ahoy-streamer-cli/releases/download/v0.1.0-standalone-preview.3/ahoy-streamer-macos-intel-preview.zip"
+    sha256 "8441909618779a21de8235d8f323b1a6936a202161c6f179b1fc99dd50d3dc54"
   end
 
   def install
