@@ -1,0 +1,22 @@
+name: Test Homebrew formula
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [macos-15-intel, macos-latest]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install AHOY Streamer
+        run: brew install oooAHOYooo/ahoy-streamer/ahoy-streamer
+      - name: Check installed command
+        run: ahoy-streamer --version
+      - name: Run formula test
+        run: brew test oooAHOYooo/ahoy-streamer/ahoy-streamer
